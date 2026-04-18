@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: greenyellow;
+}
+
+table{
+    border-color: white;
+    border-radius: 10px;
+}
+button{
+     background-color: aquamarine;
+     width: 100px;
+     height: 40px;
+}
+
+input{
+    padding: 10px;
+    font-size: 15px;
+}
+
+th{
+    height: 40px ;
+    text-align: center;
+    color: white;
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random a number in space</title>
+    <link rel="stylesheet" href="style_randomspace.css"
+  </head>
+  <body>
+    <h1>Random.org</h1>
+    <table border="1" cellspacing="5px" cellpadding="2">
+      <tr>
+        <td>
+          <input id="number_min" type="number" placeholder="Input min" />
+        </td>
+        <td>
+          <input id="number_max" type="number" placeholder="Input max" />
+        </td>
+        <td>
+          <button id="button_random" onclick="generateRandomNumber()">Generate</button>
+        </td>
+      </tr>
+      <tr>
+        <th id="number_random" colspan="3" rowspan="2">Result:</th>
+      </tr>
+      <tr></tr>
+    </table>
+  </body>
+  <script src="randomnumber.js"></script>
+</html>

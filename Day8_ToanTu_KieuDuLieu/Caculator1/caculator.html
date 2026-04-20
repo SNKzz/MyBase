@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="style_caculator1.css">
+</head>
+<body>
+    <h1>Caculator</h1>
+    <table border="1" cellpadding="2px" cellspacing="10px">
+        <tr>
+            <td colspan="2">
+                <input id="number1" type="number" placeholder="Input number 1">
+                
+            </td>
+            <td colspan="2">
+                <input id="number2" type="number" placeholder="Input number 2">
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <button id="button_add" onclick="add()">Addition </br> (+)</button>
+            </td>
+            <td>
+                <button id="button_sub" onclick="sub()">Subtraction </br> (-)</button>
+            </td>
+            <td>
+                <button id="button_mul" onclick="mul()">Multiplication </br> (x)</button>
+            </td>
+            <td>
+                <button id="button_div" onclick="div()">Dividication </br> (/)</button>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="1">Result: </th>
+            <th id="result" colspan="3"></th>
+        </tr>
+    </table>
+</body>
+<script src="caculator1.js"></script>
+</html>

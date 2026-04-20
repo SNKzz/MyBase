@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: greenyellow;
+}
+
+table {
+    border-color: rgb(151, 214, 247);
+}
+input{
+    background-color: aqua;
+    width: 97%;
+    height: 30px;
+    font-size: 18px;
+}
+
+td{
+    width: 50px;
+    padding: 5px;
+   
+}
+
+button{
+    width: 100px;
+    height: 40px;
+}
+
+th{
+    color: greenyellow;
+    height: 30px;
+}

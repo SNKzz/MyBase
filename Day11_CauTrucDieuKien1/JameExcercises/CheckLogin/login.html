@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylelogin.css" />
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend align="center">
+        <img src="https://cdn-codegym.cdn.vccloud.vn/wp-content/uploads/2026/03/CodeGym-Logo.webp">
+      </legend>
+      <input id="username" type="text" name="username" placeholder="Username"
+        style="width: 90%; padding: 5%; margin-bottom: 10%; margin-top: 5%;" required>
+      <br>
+      <input id="password" type="password" name="password" placeholder="Password" style="width: 90%; padding: 5%;"
+        required>
+
+      <table cellpadding="10" cellspacing="0">
+        <tr>
+          <td style="padding-left: 0;vertical-align:middle;">
+            <p>
+              <input type="checkbox" id="remember" name="remember" ;">
+              <label for="remember" style="font-size: 16px;">Remember me</label>
+            </p>
+          </td>
+          <td style="padding-right: 0; vertical-align:middle; font-weight: lighter;">
+            <a href="https://codegym.vn/lien-he-codegym/" target="_blank" onmouseover="mouseOverTextForgetPw()"
+              onmouseout="mouseOutTextForgetPw()" id="text_forgetpw" style="text-align: right; font-size: 15px;">
+              Forget password?</a>
+          </td>
+        </tr>
+      </table>
+
+      <button id="button_login" type="button" onclick="check()">Login</button>
+
+
+    </fieldset>
+  </form>
+</body>
+<script src="checklogin.js"></script>
+
+</html>

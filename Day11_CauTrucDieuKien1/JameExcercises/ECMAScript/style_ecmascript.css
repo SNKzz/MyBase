@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    color: greenyellow;
+}
+
+table {
+    border-color: aqua;
+    width: 50%;
+    height: 80px;
+    max-width: 280px;
+}
+
+input {
+    background-color: greenyellow;
+    color: black;
+    width: 97%;
+    height: 75%;
+}
+
+th {
+    color: greenyellow;
+    font-size: 12px;
+}
+
+button {
+    width: 97%;
+    background-color: cadetblue;
+    color: white;
+}

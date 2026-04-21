@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style_covert_money.css" />
+  </head>
+  <body>
+    <table cellpadding="0" cellspacing="0">
+      <tr>
+        <th>Amout</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="number" value="1" id="money" />
+        </td>
+        <td>
+          <select id="fromCurrent" name="fromCurrent">
+            <option selected id="typeUSD" value="1">USD</option>
+            <option id="typeVND" value="26000">Vietnam</option>
+            <option id="typeEuro" value="0.85">Euro</option>
+          </select>
+        </td>
+        <td>
+          <select id="toCurrent" name="toCurrent">
+            <option id="typeUSD" value="1">USD</option>
+            <option selected id="typeVND" value="26000">Vietnam</option>
+            <option id="typeEuro" value="0.85">Euro</option>
+          </select>
+        </td>
+        <td>
+          <button id="button_convert" onclick="convertMoney()">Convert</button>
+        </td>
+      </tr>
+      <tr>
+        <td
+          id="result"
+          colspan="4"
+          style="font-weight: bold; color: rgb(245, 47, 47)"
+        ></td>
+      </tr>
+    </table>
+  </body>
+  <script src="convert_money.js"></script>
+</html>

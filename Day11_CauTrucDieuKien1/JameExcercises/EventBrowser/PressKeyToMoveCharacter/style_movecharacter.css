@@ -1,0 +1,18 @@
+div {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    margin: 0 auto;
+    min-width: 300px;
+    min-height: 400px;
+    /*muốn hiện color của div phải có 3 yếu tố: độ dày - style - màu*/
+    border: 2px solid black; 
+    border-radius: 20px;
+}
+
+img {
+    position: absolute;
+    width: 80px;
+    top: 50px;
+    left: 50px;
+}

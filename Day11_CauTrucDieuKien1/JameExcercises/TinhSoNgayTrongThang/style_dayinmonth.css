@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: greenyellow;
+}
+
+table {
+    border-color: aqua;
+    width: 50%;
+    height: 80px;
+    max-width: 280px;
+}
+
+#month {
+    background-color: greenyellow;
+    color: black;
+    width: 92%;
+    height: 75%;
+}
+
+/* input {
+    background-color: greenyellow;
+    color: black;
+    width: 97%;
+    height: 75%;
+} */
+
+th {
+    color: greenyellow;
+    font-size: 14px;
+}
+
+#column_button {
+    width: 150px;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+    color: white;
+}

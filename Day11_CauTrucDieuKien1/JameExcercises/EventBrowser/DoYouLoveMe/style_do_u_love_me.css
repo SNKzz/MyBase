@@ -1,0 +1,27 @@
+#button_answer_yes{
+    position: absolute;
+    border-color: black;
+    width: 70px;
+    height: 30px;
+    left: 10px;
+    top: 10px;
+}
+
+#button_answer_no {
+    position: absolute;
+    border-color: black;
+    width: 70px;
+    height: 30px;
+    left: 100px;
+    top: 10px;
+    background-color: red;
+}
+
+div{
+    position: relative;
+    border: 2px solid black;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+    max-width: 90%;
+}

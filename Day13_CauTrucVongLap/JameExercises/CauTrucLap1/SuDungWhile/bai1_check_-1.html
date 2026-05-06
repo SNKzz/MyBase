@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let sum = 0;
+    let check = true;
+    function checkNumber(number) {
+        if (number != -1) {
+            sum += number;
+            document.write("Sum = " + sum + "<br>");
+            return true;
+        } else {
+            return false;
+        }
+    }
+    while (check) {
+        let number = Number(prompt("Input number being different from -1: "));
+        check = checkNumber(number);
+
+        // if (number != -1) {
+        //     sum += number;
+        //     document.write("Sum = " + sum + "<br>");
+        // } else {
+        //     alert("Ket thuc!!");
+        //     break;
+        // }
+    }
+</script>
+
+</html>

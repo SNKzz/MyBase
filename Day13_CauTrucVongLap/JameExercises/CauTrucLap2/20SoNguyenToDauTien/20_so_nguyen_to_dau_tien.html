@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let count = 0;
+    let number = 2;
+    document.write("20 số nguyên tố đầu tiên: <br>");
+    while (count < 20) {
+        let check = true;
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                check = false;
+                break;
+            }
+        }
+        if (check == true) {
+            count++;
+            document.write(number + "<br>");
+            number++;
+        } else {
+            number++;
+        }
+    }
+</script>
+
+</html>

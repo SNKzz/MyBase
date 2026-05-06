@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let tableTag = '<table border ="1">';
+    for (let row = 1; row <= 10; row++) {
+        let rowAttribute = `<tr>`;
+        for (let column = 1; column <= 10; column++) {
+            let number = column * row;
+            rowAttribute += `<td>${number}</td>`;
+        }
+        rowAttribute += "</tr>";
+        tableTag += rowAttribute;
+    }
+    tableTag += "</table>";
+    document.write(tableTag);
+</script>
+
+</html>

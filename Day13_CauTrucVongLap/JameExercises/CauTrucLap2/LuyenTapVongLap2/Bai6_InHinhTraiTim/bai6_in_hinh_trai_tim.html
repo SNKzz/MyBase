@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let chieuCao = 12;
+    let center = chieuCao / 2;
+    let chieuRong = chieuCao - 1;
+    document.write("<pre>");
+
+    //Ve nua tren hinh trai tim
+    for (let i = 1; i <= chieuCao - center; i++) {
+        for (let a = 1; a <= chieuRong; a++) {
+            if (i == 1) {
+                if (a == 1 || a == center || a == chieuRong) {
+                    document.write("   ");
+                } else {
+                    document.write(" * ");
+                }
+            } else {
+                document.write(" * ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    //Ve nua duoi hinh trai tim
+    for (let i = 0; i < chieuCao - center; i++) {
+        for (let a = 1; a <= chieuRong; a++) {
+            if (i == 0) {
+                document.write(" * ");
+            } else {
+                if (a > i && a <= chieuRong - i) {
+                    document.write(" * ");
+                } else {
+                    document.write("   ");
+                }
+            }
+
+        }
+        document.write("<br>");
+    }
+    document.write("<pre>");
+</script>
+
+</html>

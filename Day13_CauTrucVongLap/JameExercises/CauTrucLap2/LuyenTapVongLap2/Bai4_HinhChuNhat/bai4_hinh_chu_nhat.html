@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let chieuDai = 10;
+    let chieuRong = 5;
+    for (let i = 0; i < chieuRong; i++) {
+        for (let a = 0; a < chieuDai; a++) {
+            if (i == 0 || i == chieuRong - 1) {
+                document.write(" * ");
+                // continue;
+            } else {
+                if (a == 0 || a == chieuDai - 1) {
+                    document.write("*  ");
+                } else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                }
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+
+</html>

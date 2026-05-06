@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let tableTag = "<table border ='1'>"
+    for (let row = 1; row <= 9; row++) {
+        let rowAttribute = "<tr>"
+        for (let col = 2; col <= 9; col++) {
+            let result = row * col;
+            let colAttribute = `<td style=padding:10px;>${col} x ${row} = ${result}</td>`;
+            rowAttribute += colAttribute;
+        }
+        rowAttribute += "</tr>";
+        tableTag += rowAttribute;
+    }
+    tableTag += "</table>";
+    document.write(tableTag);
+</script>
+
+</html>

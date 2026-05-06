@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let number1 = 1;
+    let number2 = 2;
+    let count = 2;
+    let sum = 3;
+
+    while (count < 20) {
+        let temp = number2;
+        number2 += number1;
+        number1 = temp;
+
+        sum += number2;
+        count++;
+    }
+    document.write("Tong 20 so fibo dau tien la: " + sum);
+</script>
+
+</html>

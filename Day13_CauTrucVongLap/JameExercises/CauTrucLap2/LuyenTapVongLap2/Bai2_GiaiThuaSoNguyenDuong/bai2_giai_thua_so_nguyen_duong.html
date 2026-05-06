@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let number = Number(prompt("Nhap vao so nguyen duong bat ki: "));
+
+    if (number == 0) {
+        document.write(`=> Giai thua cua ${number} la: 1`);
+    } else {
+        let giaiThua = 1;
+        for (let i = 1; i <= number; i++) {
+            giaiThua *= i;
+        }
+        document.write(`=> Giai thua cua ${number} la: ${giaiThua}`);
+    }
+
+</script>
+
+</html>

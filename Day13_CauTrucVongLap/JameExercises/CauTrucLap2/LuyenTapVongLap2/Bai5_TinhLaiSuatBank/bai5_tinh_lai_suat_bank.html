@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let soTienBanDau = Number(prompt("Nhap vao so tien ban dau: "));
+    let soThangGui = Number(prompt("Nhap vao so thang gui: "));
+    let laiSuatCoDinh = 0.005;
+    let soTienPhaiTra = 0;
+
+    for (let i = 0; i < soThangGui; i++) {
+        soTienPhaiTra += soTienBanDau * laiSuatCoDinh + soTienBanDau;
+    }
+
+    document.write(`=> So tien phai tra sau ${soThangGui} thang vay la:  ${soTienPhaiTra}`);
+</script>
+
+</html>

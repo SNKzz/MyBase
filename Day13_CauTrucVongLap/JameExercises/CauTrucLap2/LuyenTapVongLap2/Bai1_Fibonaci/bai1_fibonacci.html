@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    let number1 = 1;
+    let number2 = 2;
+    let count = 2;
+
+    document.write(number1 + "<br>");
+    document.write(number2 + "<br>");
+
+    while (count < 100) {
+        let temp = number2;
+        number2 += number1;
+        number1 = temp;
+
+        document.write(number2 + "<br>");
+        count++;
+    }
+</script>
+
+</html>

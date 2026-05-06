@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let count = 2;
+    let number1 = 1;
+    let number2 = 2;
+
+    while (count < 20) {
+        let temp = number2;
+        number2 += number1;
+        number1 = temp;
+
+        if (number2 % 5 == 0) {
+            document.write("So fibonacci dau tien chia het cho 5 la: " + number2);
+            break;
+        } else {
+            count++;
+            continue;
+        }
+    }
+</script>
+
+</html>

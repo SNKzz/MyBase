@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="startGame()">Play guess number</button>
+</body>
+<script>
+    function startGame() {
+        let min = Number(prompt("Nhap vao so bat dau: "));
+        let max = Number(prompt("Nhap vao so ket thuc: "));
+        let guess1st = Number(prompt("Nhap vao so du doan: "));
+        let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+        let count = 3;
+
+        do {
+            if (guess1st == randomNumber) {
+                alert("Congratulation !!!");
+                break;
+            } else {
+                if (guess1st < randomNumber) {
+                    count--;
+                    guess1st = Number(prompt(`Bé hơn mất rồi, còn ${count} lần đoán !!!`));
+                } else {
+                    count--;
+                    guess1st = Number(prompt(`Lớn hơn mất rồi, còn ${count} lần đoán !!!`));
+                }
+            }
+        } while (count > 1)
+        if (count == 1) alert("Thua rui` :'( ");
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = [0, 1, 2, 3, 4];
+    let firstArray = "[";
+    for (let i = 0; i < 5; i++) {
+        if (i == 4) {
+            firstArray += array[i];
+        } else {
+            firstArray += array[i] + ", "
+        }
+    }
+    firstArray += "]";
+    document.write("Mang ban dau: " + firstArray + '<br>');
+
+    let newArray = array.reverse();
+    let beforeArray = "[";
+
+    for (let i = 0; i < newArray.length; i++) {
+        if (i == 4) {
+            beforeArray += newArray[i];
+        } else {
+            beforeArray += newArray[i] + ", "
+        }
+    }
+    beforeArray += "]";
+    document.write("=> Mang sau khi dao nguoc " + beforeArray);
+</script>
+
+</html>

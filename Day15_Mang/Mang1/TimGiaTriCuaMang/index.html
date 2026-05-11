@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let find = Number(prompt("Nhap vao so can tim: "));
+
+    let check = array.indexOf(find);
+    if (check == -1) {
+        alert(`Khong tim thay ${find} trong mang !!`);
+    } else {
+        alert(`So ${find} nam o vi tri thu ${check} trong mang !!`);
+    }
+</script>
+
+</html>

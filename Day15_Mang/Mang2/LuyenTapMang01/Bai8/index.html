@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = [-1, 23, -4, 14, -233, 3123, -3, 31];
+    document.write(`Mang ban dau ${array} <br>`);
+
+    let newArrayUp = [];
+    let newArrayDown = [];
+
+    while (array.length > 0) {
+        let max = -9999999999999999;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        newArrayDown.push(max);
+        array.splice(array.indexOf(max), 1);
+    }
+
+    document.write(`=> Mang sau khi sap xep giam dan: ${newArrayDown}<br>`);
+
+    while (newArrayDown.length > 0) {
+        let min = 9999999999999999999;
+        for (let i = 0; i < newArrayDown.length; i++) {
+            if (newArrayDown[i] < min) {
+                min = newArrayDown[i];
+            }
+        }
+        newArrayUp.push(min);
+        newArrayDown.splice(newArrayDown.indexOf(min), 1);
+    }
+    console.log(newArrayUp);
+
+    document.write(`=> Mang sau khi sap xep tang dan: ${newArrayUp}`);
+</script>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let input = 'The Quick Brown Fox';
+    document.write(`Chuoi ban dau: ${input} <br>`);
+    let result = "";
+    let arrayWords = input.split(" ");
+    for (let i = 0; i < arrayWords.length; i++) {
+        let arrayChars = arrayWords[i].split("");
+        for (let a = 0; a < arrayChars.length; a++) {
+            let check = arrayChars[a].toLowerCase();
+            if (arrayChars[a] === check && check.toUpperCase() != arrayChars[a]) {
+                arrayChars[a] = arrayChars[a].toUpperCase();
+            } else {
+                arrayChars[a] = arrayChars[a].toLowerCase();
+            }
+
+            result += arrayChars[a];
+        }
+
+        result += " ";
+    }
+    document.write(`=> Chuoi sau khi dao nguoc ki tu hoa-thuong: ${result.trim()}`); 
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    document.write(`Mang ban dau: ${array}<br>`);
+    document.write(`=> Kich thuoc cua mang: ${array.length} <br>`);
+
+    let count = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        //Dung trick lo = ))
+        // if (array[i] == Number(array[i])) {
+        //     count++;
+        // }
+
+        //Dung ma ascii
+        if (array[i].charCodeAt(0) <= 57 && array[i].charCodeAt(0) >= 48) {
+            count++;
+            console.log(array[i] + "___" + array[i].charCodeAt(0));
+        }
+    }
+    document.write(`=> So luong ki tu so trong mang: ${count}`);
+</script>
+
+</html>

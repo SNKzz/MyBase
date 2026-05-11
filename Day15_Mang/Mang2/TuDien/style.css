@@ -1,0 +1,23 @@
+table{
+    margin: 0;
+}
+td.inputWord{
+    padding: 0;
+}
+
+td.outputWord{
+    height: 50px;
+}
+
+input {
+    width: 200px;
+    height: 60px;
+}
+
+td.buttonFind{
+    padding: 0;
+}
+button{
+    width: 100%;
+    height:60px;
+}

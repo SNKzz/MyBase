@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let string = "An apple a day,#!@#% $!#@#!# $!$!4 keep the doctor a way";
+    let temArray = [];
+    let resultArray = [];
+    let temString = "";
+
+    document.write(`Chuoi ban dau: ${string}<br>`);
+
+    for (let i = 0; i < string.length; i++) {
+        asciiChar = string.charCodeAt(i);
+        if ((asciiChar >= 65 && asciiChar <= 90) || (asciiChar >= 97 && asciiChar <= 122) ||
+            (string.charAt(i) === " ")) {
+            temArray.push(string.charAt(i));
+            // console.log(temArray[i]);
+        }
+    }
+
+    console.log(temArray);
+    while (temArray.length > 0) {
+        temString += temArray.shift();
+    }
+    console.log(temString);
+
+    resultArray = temString.replace(/\s+/g, ' ').trim().split(" ");
+    console.log(resultArray);
+    // let array = string.split(" ");
+    document.write("=> So tu trong chuoi la: " + resultArray.length);
+
+</script>
+
+</html>

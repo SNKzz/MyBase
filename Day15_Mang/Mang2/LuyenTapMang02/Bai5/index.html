@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    function addStringIntoArray(array, string) {
+        for (let i = 0; i < string.length; i++) {
+            array.push(string.charAt(i))
+        }
+    }
+
+    function compareArray(arrayA, arrayB) {
+        if (arrayA.length != arrayB.length) {
+            return false;
+        } else {
+            for (let i = 0; i < arrayA.length; i++) {
+                if (arrayA[i] != arrayB[i]) {
+                    return false;
+                }
+            }
+
+            return true
+        }
+    }
+    let stringA = "An apple a day, "
+    document.write(`Chuoi A: ${stringA}<br>`);
+    let stringB = "An apple a day,      "
+    document.write(`Chuoi B: ${stringB}<br>`);
+    let arrayA = [];
+    let arrayB = [];
+
+    addStringIntoArray(arrayA, stringA.trim());
+    addStringIntoArray(arrayB, stringB.trim());
+    let check = compareArray(arrayA, arrayB);
+    if (check) {
+        document.write("=> 2 chuoi giong nhau");
+    } else {
+        document.write("=> 2 chuoi khac nhau");
+    }
+
+
+</script>
+
+</html>

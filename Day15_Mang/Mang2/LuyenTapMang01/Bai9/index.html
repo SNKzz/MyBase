@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arrayA = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    document.write(`Mang A: ${arrayA}<br>`);
+    let arrayB = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    document.write(`Mang B: ${arrayB}<br>`);
+    let arrayC = [];
+    while (arrayA.length > 0) {
+        arrayB.push(arrayA.shift());
+    }
+
+    arrayC = arrayB;
+    document.write(`=> Mang C: ${arrayC}`);
+</script>
+
+</html>

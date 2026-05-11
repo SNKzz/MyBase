@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = [1, 23, 4, 14, 233, 3123, 3, 31];
+    document.write(`Mang ban dau ${array} <br>`);
+    let max = -99999999999999999999;
+    let position = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    position = array.indexOf(max);
+    document.write(`=> Phan tu lon nhat la ${max} o vi tri thu ${position}`)
+</script>
+
+</html>

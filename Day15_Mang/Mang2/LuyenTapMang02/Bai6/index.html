@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = ['c', 's', '+', '2', '6', '1'];
+    let count = 0;
+    document.write(`Mang ban dau: ${array}<br>`);
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == '-') {
+            array[i] = '_'
+            count++;
+        }
+    }
+    if (count == 0) {
+        document.write("=> Mang ban dau khong co dau - ");
+    } else {
+        document.write(`=> Mang sau khi thay dau - bang dau _: ${array}`);
+    }
+</script>
+
+</html>

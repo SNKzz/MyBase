@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let array = [0, 1, 2, 3, 4, 5];
+    let newArray = [];
+    let number = 9;
+    let temp = 0;
+    document.write(`Mang ban dau: ${array}<br>`);
+
+    // let i = 0;
+    // while (i <= array.length) {
+    //     if (i == 0) {
+    //         temp = array[i];
+    //         newArray[i] = number;
+    //     } else {
+    //         let temp2 = array[i];
+    //         newArray[i] = temp;
+    //         temp = temp2;
+    //         console.log(array[i]);
+    //     }
+
+    //     i++;
+    // }
+
+    let i = array.length;
+    while (i >= 0) {
+        if (i != 0) {
+            newArray[i] = array[i - 1]
+        } else {
+            newArray[0] = number;
+        }
+        i--;
+    }
+    document.write(`=> Mang sau khi them phan tu vao dau mang: ${newArray}`);
+</script>
+
+</html>

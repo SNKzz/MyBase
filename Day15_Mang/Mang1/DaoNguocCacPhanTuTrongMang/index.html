@@ -11,30 +11,44 @@
 
 </body>
 <script>
-    let array = [0, 1, 2, 3, 4];
-    let firstArray = "[";
-    for (let i = 0; i < 5; i++) {
-        if (i == 4) {
-            firstArray += array[i];
-        } else {
-            firstArray += array[i] + ", "
-        }
-    }
-    firstArray += "]";
-    document.write("Mang ban dau: " + firstArray + '<br>');
+    //Cach 1: tao mang moi de chua mang dao nguoc
+    // let array = [0, 1, 2, 3, 4];
+    // let firstArray = "[";
+    // for (let i = 0; i < 5; i++) {
+    //     if (i == 4) {
+    //         firstArray += array[i];
+    //     } else {
+    //         firstArray += array[i] + ", "
+    //     }
+    // }
+    // firstArray += "]";
+    // document.write("Mang ban dau: " + firstArray + '<br>');
 
-    let newArray = array.reverse();
-    let beforeArray = "[";
+    // let newArray = array.reverse();
+    // let beforeArray = "[";
 
-    for (let i = 0; i < newArray.length; i++) {
-        if (i == 4) {
-            beforeArray += newArray[i];
-        } else {
-            beforeArray += newArray[i] + ", "
-        }
+    // for (let i = 0; i < newArray.length; i++) {
+    //     if (i == 4) {
+    //         beforeArray += newArray[i];
+    //     } else {
+    //         beforeArray += newArray[i] + ", "
+    //     }
+    // }
+    // beforeArray += "]";
+    // document.write("=> Mang sau khi dao nguoc " + beforeArray);
+
+    //Cach 2: dao nguoc cac phan tu doi xung nhau qua phan tu trung gian
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let len = array.length - 1;
+    console.log(array);
+    for (let i = 0; i < len / 2; i++) {
+        let temp = array[i];
+        array[i] = array[len - i];
+        array[len - i] = temp;
     }
-    beforeArray += "]";
-    document.write("=> Mang sau khi dao nguoc " + beforeArray);
+
+    console.log(array);
+
 </script>
 
 </html>

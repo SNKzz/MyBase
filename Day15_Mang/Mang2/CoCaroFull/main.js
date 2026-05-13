@@ -32,30 +32,33 @@ function createTable() {
 }
 
 function checkRow(rowClicked, colClicked) {
+  let countUp = 1;
+  let countDown = 1;
   let countWin = 1;
+
   let arrayPositionScored = [];
   let arraySkip = [];
   arrayPositionScored[0] = rowClicked + "" + colClicked;
 
   while (countWin <= 5) {
     if (
-      colClicked + countWin < lengthColArray &&
+      colClicked + countUp < lengthColArray &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked][colClicked + countWin]
+        arrayCaro[rowClicked][colClicked + countUp]
     ) {
-      let y = colClicked + countWin;
+      let y = colClicked + countUp;
       arrayPositionScored[countWin] = rowClicked + "" + y;
-
+      countUp++;
       countWin++;
       continue;
     } else if (
-      colClicked - countWin >= 0 &&
+      colClicked - countDown >= 0 &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked][colClicked - countWin]
+        arrayCaro[rowClicked][colClicked - countDown]
     ) {
-      let y = colClicked - countWin;
+      let y = colClicked - countDown;
       arrayPositionScored[countWin] = rowClicked + "" + y;
-
+      countDown++;
       countWin++;
       continue;
     } else {
@@ -71,24 +74,28 @@ function checkRow(rowClicked, colClicked) {
 
 function checkCol(rowClicked, colClicked) {
   let countWin = 1;
+  let countUp = 1;
+  let countDown = 1;
   let arrayPositionScored = [];
   let arraySkip = [];
   arrayPositionScored[0] = rowClicked + "" + colClicked;
   while (countWin <= 5) {
     if (
-      rowClicked + countWin < lengthRowArray &&
+      rowClicked + countUp < lengthRowArray &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked + countWin][colClicked]
+        arrayCaro[rowClicked + countUp][colClicked]
     ) {
-      arrayPositionScored[countWin] = rowClicked + countWin + "" + colClicked;
+      arrayPositionScored[countWin] = rowClicked + countUp + "" + colClicked;
+      countUp++;
       countWin++;
       continue;
     } else if (
-      rowClicked - countWin >= 0 &&
+      rowClicked - countDown >= 0 &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked - countWin][colClicked]
+        arrayCaro[rowClicked - countDown][colClicked]
     ) {
-      arrayPositionScored[countWin] = rowClicked - countWin + "" + colClicked;
+      arrayPositionScored[countWin] = rowClicked - countDown + "" + colClicked;
+      countDown++;
       countWin++;
       continue;
     } else {
@@ -104,30 +111,34 @@ function checkCol(rowClicked, colClicked) {
 
 function checkCrosslineLeftToRight(rowClicked, colClicked) {
   let countWin = 1;
+  let countUp = 1;
+  let countDown = 1;
   let arrayPositionScored = [];
   let arraySkip = [];
   arrayPositionScored[0] = rowClicked + "" + colClicked;
   while (countWin <= 5) {
     if (
-      rowClicked + countWin < lengthRowArray &&
-      colClicked + countWin < lengthColArray &&
+      rowClicked + countUp < lengthRowArray &&
+      colClicked + countUp < lengthColArray &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked + countWin][colClicked + countWin]
+        arrayCaro[rowClicked + countUp][colClicked + countUp]
     ) {
-      let x = rowClicked + countWin;
-      let y = colClicked + countWin;
+      let x = rowClicked + countUp;
+      let y = colClicked + countUp;
       arrayPositionScored[countWin] = x + "" + y;
+      countUp++;
       countWin++;
       continue;
     } else if (
-      rowClicked - countWin >= 0 &&
-      colClicked - countWin >= 0 &&
+      rowClicked - countDown >= 0 &&
+      colClicked - countDown >= 0 &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked - countWin][colClicked - countWin]
+        arrayCaro[rowClicked - countDown][colClicked - countDown]
     ) {
-      let x = rowClicked - countWin;
-      let y = colClicked - countWin;
+      let x = rowClicked - countDown;
+      let y = colClicked - countDown;
       arrayPositionScored[countWin] = x + "" + y;
+      countDown++;
       countWin++;
       continue;
     } else {
@@ -143,32 +154,40 @@ function checkCrosslineLeftToRight(rowClicked, colClicked) {
 
 function checkCrosslineRightToLeft(rowClicked, colClicked) {
   let countWin = 1;
+  let countUp1 = 1;
+  let countUp2 = 1;
+  let countDown1 = 1;
+  let countDown2 = 1;
   let arrayPositionScored = [];
   let arraySkip = [];
   arrayPositionScored[0] = rowClicked + "" + colClicked;
 
   while (countWin <= 5) {
     if (
-      rowClicked - countWin >= 0 &&
-      colClicked + countWin < lengthColArray &&
+      rowClicked - countDown1 >= 0 &&
+      colClicked + countUp1 < lengthColArray &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked - countWin][colClicked + countWin]
+        arrayCaro[rowClicked - countDown1][colClicked + countUp1]
     ) {
-      let x = rowClicked - countWin;
-      let y = colClicked + countWin;
+      let x = rowClicked - countDown1;
+      let y = colClicked + countUp1;
       arrayPositionScored[countWin] = x + "" + y;
+      countUp1++;
+      countDown1++;
       countWin++;
       continue;
     } else if (
-      rowClicked + countWin < lengthRowArray &&
-      colClicked - countWin >= 0 &&
+      rowClicked + countUp2 < lengthRowArray &&
+      colClicked - countDown2 >= 0 &&
       arrayCaro[rowClicked][colClicked] ==
-        arrayCaro[rowClicked + countWin][colClicked - countWin]
+        arrayCaro[rowClicked + countUp2][colClicked - countDown2]
     ) {
-      let x = rowClicked + countWin;
-      let y = colClicked - countWin;
+      let x = rowClicked + countUp2;
+      let y = colClicked - countDown2;
       arrayPositionScored[countWin] = x + "" + y;
       countWin++;
+      countDown2++;
+      countUp2++;
       continue;
     } else {
       break;

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input_number" oninput="check(this.value)">
+    <p id="text_result"></p>
+</body>
+
+<script>
+    let textResult = document.getElementById("text_result");
+    let arrayChar = ['a', 'b', 'a', 'c', 'd', 'e', 'f', 'g', 'h'];
+    let count = 0;
+    function lmao() {
+        count++;
+        return count;
+    }
+
+    console.log(count + "----" + lmao());
+    console.log(lmao());
+
+    function check(value) {
+        let count = 0;
+        for (let i = 0; i < arrayChar.length; i++) {
+            if (arrayChar[i] == value) {
+                count++;
+            }
+        }
+
+        if (count == 0) {
+            textResult.innerText = "-1";
+        } else {
+            textResult.innerText = `=> Ki tu ${value} xuat hien ${count} lan !!`
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+table.table_add, table.table_search{
+    background-color: rgb(232, 235, 235);
+    padding: 20px;
+    /* width: 50%; */
+}
+
+table.table_display{
+    /* background-color: rgb(232, 235, 235); */
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+table.table_title {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+input.input_add{
+    width: 300px;
+    height: 30px;
+}
+
+input.input_search {
+    margin-left: 8px;
+    width: 300px;
+    height: 30px;
+}
+
+button.text_add, button.text_search{
+    width: 100px;
+    height: 35px;
+    background-color: rgb(59, 180, 97);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(80, 182, 112);
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+
+button.text_delete,
+button.text_edit {
+    width: 100px;
+    height: 35px;
+    background-color: rgb(59, 180, 97);
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(80, 182, 112);
+    margin-left: 5px;
+    color: white;
+    font-weight: bold;
+
+}
+
+th.th_amountProduct {
+    width: 100px;
+    height: 30px;
+    /* padding: 0; */
+    padding-bottom: 20px;
+}
+
+th.th_titleProduct {
+    text-align: left;
+    width: 50%;
+}
+
+th.th_amountProduct {
+    text-align: right;
+    color: red;
+}
+
+td.td_button {
+    width: 100px;
+    height: 30px;
+    padding: 0
+}
+
+td.td_button_edit, td.td_button_delete {
+    padding: 15px;
+    width: 30%;
+    text-align: center;
+}
+td.td_name_product {
+    padding-left: 10px;
+}

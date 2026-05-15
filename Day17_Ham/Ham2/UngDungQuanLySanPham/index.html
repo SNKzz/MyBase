@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Add New Product</h3>
+    <table class="table_add">
+        <tr>
+            <td>
+                <input id="input_product" class="input_add" placeholder="Add your product here">
+            </td>
+
+            <td class="td_button">
+                <button class="text_add" onclick="addProduct()">Add</button>
+            </td>
+            <td>
+                <input id="input_search_product" class="input_search" oninput="searchProduct(this.value)"
+                    placeholder="Search your product here">
+            </td>
+        </tr>
+    </table>
+
+
+
+    <h3 style="margin-top: 30px; margin-bottom: 0px;">Display all products</h3>
+    <table id="table_titleProduct" class="table_title" cellspacing="0">
+        <tr>
+            <th class="th_titleProduct" colspan="3">Product name</th>
+
+            <th id="th_quantityProducts" class="th_amountProduct" colspan="3">Quantities: 0</th>
+        </tr>
+    </table>
+    <table id="table_displayProduct" class="table_display" cellspacing="0"></table>
+</body>
+<script src="main.js"></script>
+
+</html>

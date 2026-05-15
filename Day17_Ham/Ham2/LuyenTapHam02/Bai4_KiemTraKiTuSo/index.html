@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input_number" oninput="checkNumber(this.value)">
+    <p id="text_result"></p>
+</body>
+
+<script>
+    let textResult = document.getElementById("text_result");
+    function checkNumber(value) {
+        let result = true;
+        if (value == Number(value)) {
+            result = true;
+        } else {
+            result = false;
+        }
+
+        textResult.innerText = `${result}`;
+    }
+</script>
+
+</html>

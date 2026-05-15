@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    th {
+        width: 200px;
+        height: 30px;
+    }
+
+    td {
+        width: 100px;
+        height: 30px;
+    }
+
+    input {
+        margin: 0 auto;
+        width: 95%;
+        height: 80%;
+    }
+</style>
+
+<body>
+    <table border="1" cellspacing="0">
+        <tr>
+            <th colspan="2" id="header_measure_from">Feet</th>
+            <th colspan="2" onclick="(changeMeasure())">↔</th>
+            <th colspan="2" id="header_measure_to">Meter</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input id="input_number" oninput="caculate()">
+            </td>
+            <td colspan="3">
+                <p id="text_result"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    let measureFrom = document.getElementById("header_measure_from");
+    let measureTo = document.getElementById("header_measure_to");
+    let number = document.getElementById("input_number");
+    let resultText = document.getElementById("text_result");
+
+    function changeMeasure() {
+        console.log(measureFrom.id);
+        if (measureFrom.innerText == "Feet") {
+            measureFrom.innerText = "Meter"
+            measureTo.innerText = "Feet";
+            if (number.value != "") caculate();
+
+        } else {
+            measureTo.innerText = "Meter"
+            measureFrom.innerText = "Feet";
+            if (number.value != "") caculate();
+        }
+    }
+
+    function caculate() {
+        let valueFrom = +number.value;
+        if (measureFrom.innerText == "Feet") {
+            let result = 0.305 * valueFrom;
+            resultText.innerText = result;
+        } else {
+            let result = 3.279 * valueFrom;
+            resultText.innerText = result;
+        }
+    }
+</script>
+
+</html>

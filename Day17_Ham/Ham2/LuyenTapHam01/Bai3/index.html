@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input_number1">
+    <input id="input_number2">
+    <button onclick="compare()">Check</button>
+</body>
+<script>
+    let inputNumber1 = document.getElementById("input_number1");
+    let inputNumber2 = document.getElementById("input_number2");
+
+    function compare() {
+        number1 = +inputNumber1.value;
+        number2 = +inputNumber2.value;
+        if (number1 > number2) {
+            alert(`${number1} lon hon ${number2} !!`);
+        } else {
+            let sum = number1 + number2;
+            alert(`Tong cua 2 so da nhap la: ${sum}`);
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let name1 = "121354215";
+    let name2 = "321a123";
+    let arrayChar = String(name1).split("");
+
+    //Dung de quy
+    function checkPalindrome1(array) {
+        if (array.length > 1) {
+            if (array[0] == array[array.length - 1]) {
+                array.pop();
+                array.shift();
+                console.log(array);
+                checkPalindrome1(array);
+            } else {
+                return false;
+            }
+        }
+
+        if (array.length == 0 || array.length == 1) {
+            return true;
+        }
+    }
+    console.log(checkPalindrome1(String(name2).split("")));
+
+
+
+    //Check thong thuong
+    // function checkPalindrome(inputString) {
+    //     let arrayChar = String(inputString).split("");
+    //     for (let i = 0; i < arrayChar.length / 2; i++) {
+    //         if (arrayChar[i] != arrayChar[arrayChar.length - 1 - i]) {
+    //             return false;
+    //         }
+    //     }
+    //     return true;
+    // }
+
+    // if (checkPalindrome(name1)) {
+    //     document.write(`${name1} la chuoi doi xung!<br>`);
+    // } else {
+    //     document.write(`${name1} khong phai la chuoi doi xung!<br>`);
+    // }
+
+    // if (checkPalindrome(name2)) {
+    //     document.write(`${name2} la chuoi doi xung!<br>`);
+    // } else {
+    //     document.write(`${name2} khong phai la chuoi doi xung!<br>`);
+    // }
+</script>
+
+</html>

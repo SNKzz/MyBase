@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrayInput = [];
+        for (let i = 0; i < 2; i++) {
+            let number = Number(prompt(`Nhap vao so thu ${i + 1}:`));
+            arrayInput[i] = number;
+        }
+        function swap(array) {
+            let temp = array[0];
+            array[0] = array[1];
+            array[1] = temp;
+
+            alert(array);
+        }
+
+        swap(arrayInput);
+    </script>
+</body>
+
+</html>

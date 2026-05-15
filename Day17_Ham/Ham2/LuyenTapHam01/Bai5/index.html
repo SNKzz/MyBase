@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrayStar = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arrayTails = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function findStar(nameStar) {
+            let check = false;
+            for (let i = 0; i < arrayStar.length; i++) {
+                if (arrayStar[i] == nameStar) {
+                    alert(`=> Chom sao tuong ung ${nameStar} la ${arrayTails[i]}`);
+                    check = true;
+                    break;
+                }
+            }
+
+            if (check == false) alert("=> Khong tim thay ngoi sao " + nameStar);
+        }
+        let nameStar = prompt("Nhap vao ten ngoi sao");
+        findStar(nameStar);
+    </script>
+</body>
+
+</html>

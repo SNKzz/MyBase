@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let result = 0;
+    let array = [];
+    for (let i = 0; i < 10000; i++) {
+        array[i] = i + 1;
+    }
+
+    function isPrime(number) {
+        let check = false;
+        if (number >= -1 && number <= 1) {
+            return false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    check = true;
+                    break;
+                }
+            }
+            if (check == true) {
+                return false
+            } else {
+                return true;
+            }
+        }
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        if (isPrime(array[i]) == true) document.write(`${array[i]} <br>`)
+    }
+</script>
+
+</html>

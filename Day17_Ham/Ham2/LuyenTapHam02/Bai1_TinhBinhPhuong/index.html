@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input_number" oninput="caculate(this.value)">
+    <p id="text_result"></p>
+</body>
+
+<script>
+    let textResult = document.getElementById("text_result");
+    function caculate(number) {
+        let result = Math.pow(number, 2);
+        textResult.innerText = result;
+    }
+</script>
+
+</html>

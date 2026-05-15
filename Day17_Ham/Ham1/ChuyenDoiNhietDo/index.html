@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Temperature Converter</h1>
+    <text>Type a value in the Faharenheit field to convert the value to Celcius</text>
+    <table>
+        <tr>
+            <th>Fahrenheit</th>
+            <td>
+                <input id="input_temperature" oninput="convertFtoC(this.value)" onchange="convertFtoC(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <th>Celcius</th>
+            <th id="text_result"></th>
+        </tr>
+    </table>
+</body>
+<script>
+    let text_result = document.getElementById("text_result");
+
+    function convertFtoC(input_f_degree) {
+        let degreeF = Number(input_f_degree) / 1.8 - 32;
+        console.log(input_f_degree);
+        text_result.innerText = degreeF;
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td id="td_name">Name</td>
+            <td id="td_price">Price</td>
+            <td id="td_action" colspan="2">Action</td>
+        </tr>
+        <tbody id="tbody_tr_fruit">
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <button id="button_add_fruit" onclick="addNewFruit()">Add Fruit</button>
+                </td>
+                <td colspan="2">
+                    <div id="div_button_update">
+                        <button onclick="updateFruit(event)">Update Fruit</button>
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <form id="form_add_fruit">
+                        <input id="input_add_name_fruit" placeholder="Input name of fruit">
+                        <input id="input_add_price_fruit" placeholder="Input price of fruit" type="number">
+                    </form>
+                    <form id="form_update_fruit">
+                        <input id="input_update_name_fruit" placeholder="Input new name">
+                        <input id="input_update_price_fruit" placeholder="Input new price" type="number">
+                    </form>
+                </td>
+            </tr>
+
+        </tfoot>
+
+    </table>
+</body>
+<script src="main.js"></script>
+
+</html>

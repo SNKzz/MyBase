@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(199, 196, 196);
+}
+
+#form_add_fruit {
+    display: block;
+}
+
+#form_update_fruit {
+    display: none;
+
+}
+
+#div_button_update {
+    display: none;
+}
